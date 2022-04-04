@@ -7,10 +7,17 @@ app.set("view-engine",'ejs')
 
 //connecting to database
 
+
 const url = 'mongodb+srv://Horlarh:1234@cluster0.syhy6.mongodb.net/Todos?retryWrites=true&w=majority';
 mongoose.connect(url)
 .then(app.listen(3001,()=>{
     console.log("now listening to port 3001")
 })).catch(err=> console.log(err));
+
+//setting up route
+
+app.get('/todos',(req,res)=>{
+    res.render(index)
+})
 
 
