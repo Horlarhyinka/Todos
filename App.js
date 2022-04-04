@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose')
 
 //setting view engine
-app.set("view-engine",'ejs')
+app.set("view engine",'ejs')
 
 //connecting to database
 
@@ -17,7 +17,8 @@ mongoose.connect(url)
 //setting up route
 
 app.get('/todos',(req,res)=>{
-    res.render(index)
+    const list = ['todo1','todo2']
+    res.render('index',{list})
 })
 
 
