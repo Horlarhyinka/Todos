@@ -1,0 +1,47 @@
+body,.wrapper{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+.header{
+    width: 100% relative;
+    font-weight: bold;
+    font-size: 140px;
+    color: orangered;
+    
+    padding: 2px;
+    margin: 1px;
+}
+.inp{
+    width: 60%;
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0.151);
+    color: white;
+    font-weight: bold;
+
+}
+.inp::placeholder{
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+.btn{
+    background-color: green;
+    color: white;
+    height: 35px;
+    width: 5%;
+    border-radius: 2px;
+    font-weight: bold;
+}
+.todos{
+text-align: center;
+
+}
+.todos li{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    padding: 3px;
+    margin-left: 6px solid grey;
+}

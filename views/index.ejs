@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="view-port" content="width= device-width,initial-scale = 1.=0">
         <title>My Todo</title>
+        <link rel="stylesheet" href="/styles.css"
     </head>
     <body>
+        <div class="wrapper">
         <h1 class="header">TODO</h1>
         <form action="/todos" method="post">
-            <input type="text" placeholder="add-todos" name="todo"/>
-            <input type="submit" value="Add Todo"/>
+            <input class="inp" type="text" placeholder="add-todos" name="todo"/>
+            <input class="btn" type="submit" value="Add Todo"/>
 
         </form>
         <div>
             <ul class="todos">
                 <% list.forEach(item =>{%>
-                    <li><%= item %></li>
+                    <li><%= item.todo %></li>
                 <%})%>
             </ul>
+        </div>
         </div>
     </body>
 </html>
