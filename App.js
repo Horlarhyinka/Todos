@@ -14,7 +14,7 @@ mongoose.connect(url)
 
 .then(app.listen(3001,()=>{
     console.log("now listening to port 3001")
-})).catch(err=> console.log(err));
+})).catch(err => console.log(err));
 
 //adding middlewares
 
@@ -26,7 +26,7 @@ app.use(express.urlencoded({extended:true}))
 
 const todoSchema = new mongoose.Schema({
     todo:{ type:"string",required: true}
-})
+},{timestamps:true})
 
 const Todo = mongoose.model("Todo",todoSchema);
 
@@ -34,7 +34,7 @@ const Todo = mongoose.model("Todo",todoSchema);
 const list = ['todo1','todo2']
 
 app.get('/todos',(req,res)=>{
-    Todo.find()
+    Todo.find().sort({createdAt:-1})
     .then((result)=>{
         res.render('index',{list:result});
     })
@@ -52,4 +52,6 @@ app.post('/todos',(req,res)=>{
     
 })
 
+app.delete('/todos/:id',(req,res)=>{
 
+})

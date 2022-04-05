@@ -9,10 +9,16 @@ body,.wrapper{
     font-weight: bold;
     font-size: 140px;
     color: orangered;
-    
     padding: 2px;
     margin: 1px;
 }
+.disable{
+    display: none;
+}
+.iconify{
+    border-radius: 50%;
+}
+
 .inp{
     width: 60%;
     height: 35px;
@@ -30,12 +36,14 @@ body,.wrapper{
     background-color: green;
     color: white;
     height: 35px;
-    width: 5%;
+    width: 25%;
     border-radius: 2px;
     font-weight: bold;
+    margin: 1px 3px;
 }
 .todos{
 text-align: center;
+display: block;
 
 }
 .todos li{
@@ -43,5 +51,12 @@ text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     padding: 3px;
-    margin-left: 6px solid grey;
+    margin-left: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20%;
+}
+
+.todos li:hover{
+    background-color: rgb(70, 68, 68);
 }
