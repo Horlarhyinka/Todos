@@ -38,8 +38,6 @@ app.get('/todos',(req,res)=>{
     .then((result)=>{
         res.render('index',{list:result});
     })
-        
-    
 })
 app.post('/todos',(req,res)=>{
     const newtodo = new Todo({
@@ -51,7 +49,8 @@ app.post('/todos',(req,res)=>{
     }).catch((err)=>console.log(err))
     
 })
-
 app.delete('/todos/:id',(req,res)=>{
-
+    const _id = req.params.id;
+    Todo.findByIdAndDelete(_id)
+    .then(res.json({redirect: '/todos'}))
 })

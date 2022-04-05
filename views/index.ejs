@@ -18,22 +18,13 @@
             <ul class="todos">
                 <% if(list.length>0){%>
                 <% list.forEach(item =>{%>
-                    <li><%= item.todo %> <a  id="trashCan" href= ""><span class="iconify"  data-icon="bi:trash-fill" style="color: rgba(250, 248, 248, 0.425);" data-width="30" data-height="30"></span></a></li> 
+                    <li><%= item.todo %> <a  id="trashCan"  data-doc = "<%= item._id %>"><span class="iconify"  data-icon="bi:trash-fill" style="color: rgba(250, 248, 248, 0.425);" data-width="30" data-height="30"></span></a></li> 
                 <%})%>
                 <%}%>
             </ul>
 
         </div>
         </div>
-        <script>
-            const items = document.querySelectorAll('li');
-
-          const trashCans =  document.querySelectorAll('#trashCan')
-         trashCans.forEach(trashCan =>{
-            trashCan.addEventListener('click',(e)=>{
-              console.log(e.target)
-          })
-         })
-        </script>
+        <script type="text/javascript" src="controls.js"></script>
     </body>
 </html>

@@ -33,13 +33,19 @@ body,.wrapper{
     text-align: center;
 }
 .btn{
-    background-color: green;
+    background-color: rgb(0, 128, 0);
     color: white;
     height: 35px;
     width: 25%;
     border-radius: 2px;
     font-weight: bold;
     margin: 1px 3px;
+}
+.btn:hover{
+    background-color: rgb(123, 238, 123),rgb(0, 128, 0);
+}
+.btn:active{
+    background: radial-gradient(center,rgb(123, 238, 123));
 }
 .todos{
 text-align: center;
@@ -51,12 +57,20 @@ display: block;
     font-family: Arial, Helvetica, sans-serif;
     list-style: none;
     padding: 3px;
-    margin-left: 20%;
+    margin-left: 10px;
     display: flex;
     justify-content: space-between;
-    margin-right: 20%;
 }
 
 .todos li:hover{
     background-color: rgb(70, 68, 68);
+}
+
+#trashCan{
+    padding-right: 30px;
+}
+
+.iconify:hover{
+    color: white !important;
+    background-color: rgb(75, 70, 70);
 }
